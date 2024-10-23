@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Reservation Panel</title>
+    <link rel="stylesheet" href="res.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(234, 228, 220);
+      margin: 0;
+      padding: 0;
+    }
+
+    .admin-panel {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    section {
+      margin: 20px 0;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #333;
+      color: white;
+    }
+
+    .delete-btn {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .delete-btn:hover {
+      background-color: #e60000;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    form label {
+      flex: 1 0 100%;
+    }
+
+    form input,
+    form select,
+    form button {
+      padding: 10px;
+      font-size: 16px;
+      flex: 1 0 48%;
+    }
+
+    form button {
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #555;
+    }
+  </style>
+  <body>
+    <div class="admin-panel">
+      <header>
+        <h1>Admin Reservation check</h1>
+      </header>
+      <section class="reservation-summary">
+        <h2>Current Reservations</h2>
+        <p>Total Reservations: <span id="reservation-count">15</span></p>
+        <p>Available Rooms: <span id="free-rooms">5</span></p>
+      </section>
+
+      <section class="reservation-list">
+        <h2>Reservation List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Reservation ID</th>
+              <th>Hostaler Name</th>
+              <th>Room Type</th>
+              <th>Check-in</th>
+              <th>Check-out</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="reservation-table">
+            <tr>
+              <td>001</td>
+              <td>anura kumara</td>
+              <td>Single Room</td>
+              <td>2024-09-15</td>
+              <td>2024-09-18</td>
+              <td>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="add-reservation">
+        <h2>Add Reservation</h2>
+        <form id="add-reservation-form">
+          <label for="guest-name">Hostaler Name:</label>
+          <input type="text" id="guest-name" name="guest-name" required />
+
+          <label for="room-type">Room Type:</label>
+          <select id="room-type" name="room-type">
+            <option value="single">Single Room</option>
+            <option value="double">Sharing Room</option>
+            <option value="suite">Dometry</option>
+          </select>
+
+          <label for="check-in">Check-in Date:</label>
+          <input type="date" id="check-in" name="check-in" required />
+
+          <label for="check-out">Check-out Date:</label>
+          <input type="date" id="check-out" name="check-out" required />
+
+          <button type="submit">Add Reservation</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

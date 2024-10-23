@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Entry/Exit System</title>
+  <link rel="stylesheet" href="HostelQR.css"> <!-- Add your custom CSS for styling -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script> <!-- Include QR Code library -->
+</head>
+<body>
+
+  <h1>Hostel Entry/Exit System</h1>
+
+  <!-- QR Code display section -->
+  <div id="qrcode"></div>
+
+  <!-- Hostel form for user input -->
+  <form id="hostel-form">
+    <label for="email">Enter QR Code (User email):</label>
+    <input type="text" id="email" name="email" placeholder="Scan or Enter User Email" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Status message to show entry/exit information -->
+  <div id="status"></div>
+
+  <!-- Script to handle form submission and QR code generation -->
+  <script src="HostelQR.js"></script>
+
+  <script>
+    // QR code generation (optional)
+    const qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: "Scan your hostel entry QR here!", // You can change this to dynamic content
+      width: 150,
+      height: 150 
+    });
+
+    // Optionally, this can be tied to email input to generate a QR code based on the email.
+    const emailInput = document.getElementById("email");
+    emailInput.addEventListener("input", function() {
+      qrcode.makeCode(emailInput.value); // Generate QR code when the user types
+    });
+  </script>
+
+</body>
+</html>

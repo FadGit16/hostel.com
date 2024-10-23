@@ -1,0 +1,137 @@
+.payment-summary-table {
+width: 100%;
+border-collapse: collapse;
+margin: 20px 0;
+font-size: 16px;
+text-align: left;
+}
+
+.payment-summary-table th, .payment-summary-table td {
+padding: 12px 15px;
+border: 1px solid #ddd;
+}
+
+.payment-summary-table th {
+background-color: #f4f4f4;
+color: #333;
+text-transform: uppercase;
+}
+
+.payment-summary-table td {
+background-color: #fff;
+}
+
+.payment-summary-table tbody tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+
+.payment-summary-table tbody tr:hover {
+background-color: #f1f1f1;
+}
+
+.payment-summary-table th, .payment-summary-table td {
+text-align: left;
+}
+
+.payment-summary-table th {
+font-weight: bold;
+}
+
+.payment-summary-table td {
+font-weight: normal;
+}
+
+.payment-summary-table {
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+
+.payment-summary-table th, .payment-summary-table td {
+border: none;
+}
+
+.payment-summary-table thead th {
+font-size: 14px;
+letter-spacing: 0.1rem;
+}
+
+/* General table styles */
+table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;
+}
+
+/* Table header styles */
+table thead {
+background-color: #f2f2f2;
+}
+
+table th,
+table td {
+border: 1px solid #ddd;
+padding: 10px;
+text-align: left;
+}
+
+table th {
+font-weight: bold;
+background-color: #007bff;
+color: white;
+}
+
+table tr:hover {
+background-color: #f5f5f5;
+}
+
+.payment-button, button {
+background-color: #28a745; 
+color: white;
+border: none;
+padding: 10px 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-top: 10px;
+cursor: pointer;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+.payment-button:hover, button:hover {
+background-color: #218838; 
+}
+
+.payment-summary-table {
+margin-top: 20px;
+}
+
+.card {
+border: 1px solid #ddd;
+border-radius: 5px;
+padding: 20px;
+margin: 20px 0;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+display: flex;
+justify-content: space-between;
+}
+
+.tab-button {
+background-color: #007bff;
+color: white;
+border: none;
+padding: 10px 15px;
+cursor: pointer;
+border-radius: 5px;
+margin-right: 10px;
+}
+
+.tab-button.active {
+background-color: #0056b3;
+}
+
+
